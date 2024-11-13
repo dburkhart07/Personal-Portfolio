@@ -48,30 +48,24 @@ function Homepage() {
 
         {/* Card 3 */}
         <Card title="My Skills">
-          <div className="flex flex-col md:flex-row items-start">
-            <div className="pt-[4rem] md:pt-[8rem] pb-[5rem] bg-[#09101a]">  
-              <div className = "w-[80%] mx-auto pt-[4rem] md:pt-[8rem] grid grid-cols-1 md:grid-cols-2 gap-[2rem] items-center">
-                <div>
-                    <SkillsLanguage 
-                        skill1 = "HTML"
-                        skill2 = "CSS" 
-                        skill3 = "JavaScript" 
-                        level1 = "w-[91%]" 
-                        level2 = "w-[88%]" 
-                        level3 = "w-[80%]"/>
-                </div>
-                <div>
-                    <SkillsLanguage 
-                        skill1 = "React Js"
-                        skill2 = "Next Js" 
-                        skill3 = "TypeScript" 
-                        level1 = "w-[81%]" 
-                        level2 = "w-[78%]" 
-                        level3 = "w-[60%]"/>
+          <div className="flex flex-col-2 md:flex-row items-start">
+            <div className="pb-[5rem] flex-1">  
+              <div className = "mx-auto pt-0 md:pt-0 grid grid-cols-1 gap-1px items-center">
+                <div className="w-[1/2] ml-10">
+                  <SkillsLanguage
+                    skills={[
+                      { name: 'Java: 5 years', level: 'w-[100%]', color: 'bg-[#ff5733]' },
+                      { name: 'Python: 4 years', level: 'w-[80%]', color: 'bg-[#f9a825]' },
+                      { name: 'HTML/CSS/JS: 2 years', level: 'w-[40%]', color: 'bg-[#8e44ad]' },
+                      { name: 'React: 1.5 years', level: 'w-[30%]', color: 'bg-[#4caf50]' },
+                      { name: 'C: 1.5 years', level: 'w-[30%]', color: 'bg-[#3b3f42]' },
+                      { name: 'TypeScript: 1 year', level: 'w-[20%]', color: 'bg-[#00bcd4]' }
+                    ]}
+                  />
                 </div>
               </div>
             </div>
-            <div className="flex-1 flex justify-center md:ml-10 md:-mt-10 mt-5">
+            <div className="flex-1 flex justify-right md:mt-15 mt-5 mr-5">
               <SkillCube />
             </div>
           </div>

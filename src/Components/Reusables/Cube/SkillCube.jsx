@@ -5,7 +5,7 @@ import './index.css'
 
 const SkillCube = () => {
   return (
-    <div className="stage-cube-cont">
+    <div className="stage-cube-cont flex justify-center items-center">
       <div className="cubespinner">
         <div className="face1">
           <FontAwesomeIcon icon={faAngular} color="#DD0031" />
