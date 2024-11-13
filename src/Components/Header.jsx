@@ -44,7 +44,7 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/projects" className="hover:text-[rgb(255,94,77)]">
+              <NavLink to="/experience" className="hover:text-[rgb(255,94,77)]">
                 <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
                 Experience
               </NavLink>

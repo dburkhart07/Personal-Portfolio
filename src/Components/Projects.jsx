@@ -9,7 +9,6 @@ const Projects = () => {
     {image: PlaceholderImage, techStack: "Python, Scikit-learn", projectLink: "https://youtube.com", delay: 1.5 },
     {image: PlaceholderImage, techStack: "Java, Springboot", projectLink: "https://youtube.com", delay:2 },
   ];
-
   return (
     <div className="bg-[rgb(85,17,0)] text-[rgb(255,233,209)] pt-[3rem] md:pt-[4rem] pb-[1rem]">
       <h1 className="flex justify-center text-2xl md:text-3xl lg:text-4xl font-bold mb-12">

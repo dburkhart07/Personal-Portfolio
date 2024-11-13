@@ -5,6 +5,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Confirmation from './Components/Confirmation';
 import Projects from './Components/Projects';
+import Experience from './Components/Experience';
 import './index.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="confirmation" element={<Confirmation />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="experience" element={<Experience />} />
       </Route>
     </Routes>
   );
