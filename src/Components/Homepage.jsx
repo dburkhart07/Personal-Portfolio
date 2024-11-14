@@ -33,25 +33,32 @@ function Homepage() {
         </Card>
 
         {/* Card 2 */}
-        <Card title="Who am I (link to the about me)" delay={0.5}>
-          <div className="flex flex-col md:flex-row">
+        <Card title="Who am I" delay={0.5}>
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <div className="w-full md:w-1/2 pr-4">
-              <p className="ml-5 mr-5 md:mr-20">
-                This is a sample text for the second card. You can talk about your educational background and relevant coursework that has shaped your career path.
+              <p className="text-[24px] ml-5 mr-5 mb-5 md:mr-20">
+                I'm a Computer Science and AI, and Math student at Northeastern University, passionate about leveraging technology in 
+                healthcare and education. My goal is to use my skills to make a positive impact in our society and my community, as well
+                as pass my knowledge onto others.
               </p>
             </div>
-            <div className="w-full md:w-1/2">
-              {/* Image goes here or something */}
+            <div className="w-full md:w-1/2 flex items-center justify-center relative">
+              <a href="about">
+                <h1 className="text-[72px] font-bold animate-gradient-text text-center">
+                  Learn more about me!
+                </h1>
+              </a>
             </div>
           </div>
         </Card>
 
         {/* Card 3 */}
-        <Card title="My Skills">
-          <div className="flex flex-col-2 md:flex-row items-start">
-            <div className="pb-[5rem] flex-1">  
-              <div className = "mx-auto pt-0 md:pt-0 grid grid-cols-1 gap-1px items-center">
-                <div className="w-[1/2] ml-10">
+        <Card title="My Skills/Favorite Technologies">
+          <div className="flex flex-col md:flex-row items-start">
+            {/* Skills Language Section */}
+            <div className="flex-1 pb-[5rem]">
+              <div className="mx-auto pt-0 md:pt-0 grid grid-cols-1 gap-1px items-center">
+                <div className="w-full md:w-[1/2] ml-10">
                   <SkillsLanguage
                     skills={[
                       { name: 'Java: 5 years', level: 'w-[100%]', color: 'bg-[#ff5733]' },
@@ -65,22 +72,9 @@ function Homepage() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 flex justify-right md:mt-15 mt-5 mr-5">
+            {/* SkillCube Section */}
+            <div className="flex-1 flex justify-center mt-5 md:mt-0">
               <SkillCube />
-            </div>
-          </div>
-        </Card>
-
-        {/* Card 4 */}
-        <Card title="Card Title 4" delay={1.5}>
-          <div className="flex flex-col md:flex-row">
-            <div className="w-full md:w-1/2 pr-4">
-              <p className="ml-5 mr-5 md:mr-20">
-                This is a sample text for the fourth card. Discuss your interests outside of work or school, and how they have shaped you.
-              </p>
-            </div>
-            <div className="w-full md:w-1/2">
-              {/* Image goes here or something */}
             </div>
           </div>
         </Card>

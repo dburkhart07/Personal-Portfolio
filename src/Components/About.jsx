@@ -16,8 +16,8 @@ const About = () => {
           <p>
             Hi, I'm Dalton! I'm currently a second year student studying Computer Science and AI at Northeastern University.
             My technical interests lie within the intersection between AI and software, specifically in healthcare, economics, and psychology.
-            I also enjoy doing a lot of work with education in tech, and love working on projects that aim to educate younger or underserved
-            communities on how to become software developers.
+            I also enjoy doing a lot of volunteer work in general, but especially with education in tech, and love working on 
+            projects that aim to educate younger or underserved communities on how to become software developers.
           </p>
         </section>
 
