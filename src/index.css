@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 /* You can add additional custom styles below */
+
 * {
     margin: 0;
     padding: 0;
@@ -54,4 +55,44 @@
   -webkit-text-fill-color: transparent;
   animation: moveGradient 3s linear infinite;
 }
+
+@keyframes moveFold {
+  0%, 100% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes moveMail {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+}
+
+.animated-mail {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  animation: moveMail 2s ease-in-out infinite, moveFold 2s ease-in-out infinite;
+}
+
+.shadow {
+  width: 250px;
+  animation: shadowExpand 2s ease-in-out infinite;
+}
+
+@keyframes shadowExpand {
+  0%, 100% {
+    width: 400px;
+  }
+  50% {
+    width: 250px;
+  }
+}
+
 

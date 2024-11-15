@@ -9,25 +9,29 @@ const Experience = () => {
       company: "Northeastern University Research",
       dates: "September 2024 - Present",
       description:
-        `Researched and analyzed the effect of military conflict in the Middle East on the protection of women in their respective countries (particularly Iran, Egypt, and Armenia)\nUtilized Web APIs, Microsoft Office, and Python to gather data, summarize, and visualize`
+        `Researched and analyzed the effect of military conflict in the Middle East on the protection of women in their respective countries (particularly Iran, Egypt, and Armenia)\nUtilized Web APIs, Microsoft Office, and Python to gather data, summarize, and visualize`,
+      delay: 0.5
     },
     {
       company: "Wind River Environmental",
       dates: "May - August 2024",
       description:
-        `Leveraged Excel and the company database to clean over 25,000 customer profiles, merging and deactivating accounts, ensuring unnecessary messages were not sent to past and present customers, saving large messaging fees\nPerformed monthly analyses using Excel, visually categorizing customer feedback, achieving a 75% positive feedback rate\nUtilized Microsoft Office tools to combine 15 training documents into a single, comprehensive visualization on diagnosing residential problems, bringing simplicity to technicians and serving as a visual aid and explanation to homeowners`
+        `Leveraged Excel and the company database to clean over 25,000 customer profiles, merging and deactivating accounts, ensuring unnecessary messages were not sent to past and present customers, saving large messaging fees\nPerformed monthly analyses using Excel, visually categorizing customer feedback, achieving a 75% positive feedback rate\nUtilized Microsoft Office tools to combine 15 training documents into a single, comprehensive visualization on diagnosing residential problems, bringing simplicity to technicians and serving as a visual aid and explanation to homeowners`,
+      delay: 1
     },
     {
       company: "Code Ninjas",
       dates: "June - August 2024",
       description:
-        `Mastered and delivered 4 in-depth course curricula to 40 kids over 6 week-long camps, fostering a collaborative learning environment, aiding students individually, and ensuring maximum material retention\nTaught topics about video game modding using MCreator and Minecraft Education Edition, website development in HTML, CSS, and JavaScript, and YouTube video making and editing using OpenShot Video Editor, Bandicam, and Canva`
+        `Mastered and delivered 4 in-depth course curricula to 40 kids over 6 week-long camps, fostering a collaborative learning environment, aiding students individually, and ensuring maximum material retention\nTaught topics about video game modding using MCreator and Minecraft Education Edition, website development in HTML, CSS, and JavaScript, and YouTube video making and editing using OpenShot Video Editor, Bandicam, and Canva`,
+      delay: 1.5
     },
     {
       company: "Worcester Polytechnic Institute",
       dates: "October 2023 - May 2024",
       description:
-        `Examined the usage of large language models and the OpenAI API to generate fuzzing inputs to create a more automated fuzzing process, expanding code coverage of several programming languages up to 90%\nStudied academic articles involving the use of machine learning to enhance achievement of vulnerabilities within software and improve data security within computer systems, presenting findings to several university professors`
+        `Examined the usage of large language models and the OpenAI API to generate fuzzing inputs to create a more automated fuzzing process, expanding code coverage of several programming languages up to 90%\nStudied academic articles involving the use of machine learning to enhance achievement of vulnerabilities within software and improve data security within computer systems, presenting findings to several university professors`,
+      delay: 2
     }
   ];
 
@@ -47,6 +51,7 @@ const Experience = () => {
                   company={experience.company}
                   dates={experience.dates}
                   description={experience.description}
+                  delay = {experience.delay}
                 />
               </div>
             );
@@ -54,7 +59,12 @@ const Experience = () => {
         </div>
 
         {/* Right Column - Image */}
-        <div className="relative w-full lg:w-1/2 md:w-full mt-8 md:mt-8 lg:mt-0">
+        <div className="relative w-full lg:w-1/2 md:w-full mt-8 md:mt-8 lg:mt-0"
+              style={{
+                animation: `fadeInUp 2.5s ease-out forwards`,
+                opacity: 0, // Start with an invisible state
+              }}
+        >
           <img
             src={ExpImg}
             alt="Experience background"

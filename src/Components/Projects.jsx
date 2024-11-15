@@ -11,7 +11,12 @@ const Projects = () => {
   ];
   return (
     <div className="bg-[rgb(85,17,0)] text-[rgb(255,233,209)] pt-[3rem] md:pt-[4rem] pb-[1rem]">
-      <h1 className="flex justify-center text-2xl md:text-3xl lg:text-4xl font-bold mb-12">
+      <h1 className="flex justify-center text-2xl md:text-3xl lg:text-4xl font-bold mb-12"
+          style={{
+            animation: `fadeInUp 2s ease-out forwards`,
+            opacity: 0, // Start with an invisible state
+          }}
+      >
         Projects
       </h1>
       <div className="w-[90%] mx-auto flex flex-wrap justify-center gap-[2rem]">

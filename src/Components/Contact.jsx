@@ -56,15 +56,25 @@ const Contact = () => {
 
     return (
         <div className='container contact-page text-[rgb(255,233,209)] px-6 h-full md:h-auto'>
-            <div className='text-zone ml-5 w-full md:w-1/2'>
-                <h1 className='text-2xl font-bold'>Contact Me</h1>
-                <p className='mt-4'>
-                    I am actively looking for summer software engineering internships,
-                    as well as any opportunities to work on fun, innovative projects.
-                    If you have any questions or are interested in getting in touch,
-                    please fill out the form below.
-                </p>
-                <div className='contact-form mt-5'>
+            <div className='text-zone ml-6 w-full md:w-1/2 mb-10'>
+                <div style={{
+                        animation: `fadeInUp 1s ease-out forwards`,
+                        opacity: 0, 
+                     }}>
+                    <h1 className='text-2xl font-bold mt-10'>Contact Me</h1>
+                    <p className='mt-4'>
+                        I am actively looking for summer software engineering internships,
+                        as well as any opportunities to work on fun, innovative projects.
+                        If you have any questions or are interested in getting in touch,
+                        please fill out the form below.
+                    </p>
+                </div>
+                <div className='contact-form mt-5'
+                     style={{
+                        animation: `fadeInUp 1s ease-out forwards`,
+                        animationDelay: `0.5s`,
+                        opacity: 0, 
+                     }}>
                   <form ref={refForm} onSubmit={sendEmail} className='bg-[rgb(119,47,17)] px-5 pt-5 pb-10 rounded relative w-full h-full md:w-auto md:h-auto'>
                     <ul className='p-0 m-0'>
                         <li className='mb-3'>
