@@ -1,10 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './Reusables/Card'; 
-import SkillCube from './Reusables/Cube/SkillCube'
+import SkillCube from './Reusables/Cube/SkillCube';
 import SkillsLanguage from './Reusables/SkillsLanguage';
 import ProfessionalPicture from '../Img/Professional Picture.jpg';
 
 function Homepage() {
+  // State to keep track of the selected skill category
+  const [selectedCategory, setSelectedCategory] = useState('languages'); // default to languages
+
+  // Define skill data for each category
+  const skillData = {
+    languages: [
+      { name: 'Java: 5 years', level: '100%', color: 'bg-[#ff5733]' },
+      { name: 'Python: 4 years', level: '80%', color: 'bg-[#f9a825]' },
+      { name: 'HTML/CSS/JS: 2 years', level: '40%', color: 'bg-[#8e44ad]' },
+      { name: 'C: 1.5 years', level: '30%', color: 'bg-[#3b3f42]' },
+      { name: 'TypeScript: 1 year', level: '20%', color: 'bg-[#00bcd4]' }
+    ],
+    frameworks: [
+      { name: 'React: 2 years', level: '100%', color: 'bg-[#ff5733]' },
+      { name: 'Tensorflow: 2 years', level: '100%', color: 'bg-[#f9a825]' },
+      { name: 'Tailwind: 1 year', level: '50%', color: 'bg-[#8e44ad]' },
+      { name: 'Express: 1 year', level: '50%', color: 'bg-[#3b3f42]' },
+      { name: 'Springboot: 1 year', level: '50%', color: 'bg-[#00bcd4]' }
+    ],
+    devtools: [
+      { name: 'Git: 3 years', level: '100%', color: 'bg-[#ff5733]' },
+      { name: 'GitHub: 3 years', level: '100%', color: 'bg-[#f9a825]' },
+      { name: 'VSCode: 3 years', level: '100%', color: 'bg-[#8e44ad]' },
+      { name: 'IntelliJ: 2 years', level: '66.7%', color: 'bg-[#3b3f42]' },
+      { name: 'Postman: 2 years', level: '66.7%', color: 'bg-[#00bcd4]' }
+    ]
+  };
+
   return (
     <section className="flex flex-col items-center bg-[rgb(85,17,0)] text-[rgb(255,233,209)] p-4">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Welcome to Dalton's Website</h1>
@@ -54,27 +82,47 @@ function Homepage() {
 
         {/* Card 3 */}
         <Card title="My Skills/Favorite Technologies">
-          <div className="flex flex-col md:flex-row items-start">
-            {/* Skills Language Section */}
-            <div className="flex-1 pb-[5rem]">
-              <div className="mx-auto pt-0 md:pt-0 grid grid-cols-1 gap-1px items-center">
-                <div className="w-full md:w-[1/2] ml-10">
-                  <SkillsLanguage
-                    skills={[
-                      { name: 'Java: 5 years', level: 'w-[100%]', color: 'bg-[#ff5733]' },
-                      { name: 'Python: 4 years', level: 'w-[80%]', color: 'bg-[#f9a825]' },
-                      { name: 'HTML/CSS/JS: 2 years', level: 'w-[40%]', color: 'bg-[#8e44ad]' },
-                      { name: 'React: 1.5 years', level: 'w-[30%]', color: 'bg-[#4caf50]' },
-                      { name: 'C: 1.5 years', level: 'w-[30%]', color: 'bg-[#3b3f42]' },
-                      { name: 'TypeScript: 1 year', level: 'w-[20%]', color: 'bg-[#00bcd4]' }
-                    ]}
-                  />
+          <div className="flex flex-col">
+            {/* Buttons to select skill category */}
+            <div className="mb-4">
+              <button
+                onClick={() => setSelectedCategory('languages')}
+                className={`px-4 py-2 mx-2 ${selectedCategory === 'languages' ? 'bg-orange-400' : 'bg-transparent'} text-white rounded-md`}
+              >
+                Languages
+              </button>
+              <button
+                onClick={() => setSelectedCategory('frameworks')}
+                className={`px-4 py-2 mx-2 ${selectedCategory === 'frameworks' ? 'bg-orange-400' : 'bg-transparent'} text-white rounded-md`}
+              >
+                Frameworks
+              </button>
+              <button
+                onClick={() => setSelectedCategory('devtools')}
+                className={`px-4 py-2 mx-2 ${selectedCategory === 'devtools' ? 'bg-orange-400' : 'bg-transparent'} text-white rounded-md`}
+              >
+                Developer Tools
+              </button>
+            </div>
+
+            {/* Skill Category */}
+            <div className="flex flex-col md:flex-row items-start w-full">
+              <div className="flex-1 pb-[5rem] md:pb-0 w-full md:w-1/2">
+                <div className="mx-auto pt-0 md:pt-0 grid grid-cols-1 gap-1px items-center">
+                  <div className="w-full">
+                    <SkillsLanguage
+                      key={selectedCategory} // Force re-render on category change
+                      skills={skillData[selectedCategory]}
+                      transitionSpeed="2s"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* SkillCube Section */}
-            <div className="flex-1 flex justify-center mt-5 md:mt-0">
-              <SkillCube />
+
+              {/* SkillCube Section */}
+              <div className="flex-1 flex justify-center mt-5 md:mt-0 hidden md:block w-full md:w-1/2">
+                <SkillCube />
+              </div>
             </div>
           </div>
         </Card>

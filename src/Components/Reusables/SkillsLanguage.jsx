@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SkillsLanguage = ({ skills }) => {
+const SkillsLanguage = ({ skills, transitionSpeed }) => {
   return (
     <div className="pt-1">
       {skills.map((skill, index) => (
@@ -9,12 +9,13 @@ const SkillsLanguage = ({ skills }) => {
             {skill.name}
           </h1>
           <span className={`${skill.level} h-[6px] absolute ${skill.color} rounded-sm`} 
-                style = {{ width: skill.level }}>       
+                style = {{ width: skill.level, transition: `width ${transitionSpeed} ease-in-out` }}>       
           </span>
         </div>
       ))}
     </div>
   );
 };
+
 
 export default SkillsLanguage;
