@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectCard = ({ image, techStack, projectLink, delay }) => {
+const ProjectCard = ({ title, image, techStack, projectLink, delay }) => {
   return (
     <div 
       className="relative group hover:-translate-y-6 transition-all duration-200 rounded-lg overflow-hidden"
@@ -28,7 +28,7 @@ const ProjectCard = ({ image, techStack, projectLink, delay }) => {
         <div className="absolute bottom-0 left-0 w-full px-4 py-4 transition-all duration-300">
           {/* Tech Stack (Moves Up on Hover) */}
           <p className="text-2xl text-white group-hover:translate-y-[-4rem] transition-all duration-300">
-            Project
+            {title}
           </p>
           <p className="text-md text-white group-hover:translate-y-[-3rem] transition-all duration-300">
             {techStack}
