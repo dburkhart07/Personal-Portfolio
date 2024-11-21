@@ -13,17 +13,12 @@ router.post('/', async (req, res) => {
     }
 
     // Create a new contact entry
-    const newContact = new Contact({
-      name,
-      email,
-      subject,
-      message,
-    });
+    const newContact = new Contact({ name, email, subject, message });
 
     // Save the contact entry to the database
     await newContact.save();
-
     res.status(201).json({ message: 'Message received successfully!' });
+    console.log("New Contact:", newContact);
   } catch (error) {
     console.error('Error saving contact form data:', error.message);
     res.status(500).json({ message: 'Server error' });

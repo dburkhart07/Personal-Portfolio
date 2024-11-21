@@ -21,7 +21,7 @@ function App() {
     // Simulate a delay for the loading spinner
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500); // Adjust timeout duration as needed
+    }, 1500); // Adjust timeout duration as needed
 
     return () => clearTimeout(timer);
   }, [location]); // Re-run the effect whenever the location changes
