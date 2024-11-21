@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Contact = () => {
     const refForm = useRef();
@@ -16,6 +17,8 @@ const Contact = () => {
         const email = refForm.current.email.value;
         const confirmEmail = refForm.current.confirm_email.value;
         const name = refForm.current.name.value;
+        const subject = refForm.current.subject.value;
+        const message = refForm.current.message.value;
 
         if (email !== confirmEmail) {
             alert('Email addresses do not match. Please check and try again.');
@@ -27,11 +30,14 @@ const Contact = () => {
             return;
         }
 
+        // Send the email using EmailJS
         emailjs.sendForm('service_nj4aeh5', 'template_ogqgudi', refForm.current, 'cY2UcSIMLnEaSJ-1P')
             .then(
                 (response) => {
+                    // After successfully sending email, send the data to the backend to store it
+                    saveFormDataToBackend(name, email, subject, message);
                     sendConfirmationEmail(name, email);
-                    navigate('../Confirmation');
+                    navigate('../Confirmation'); // Redirect to confirmation page
                 },
                 (error) => {
                     alert("Failed to send message, please try again.");
@@ -40,6 +46,7 @@ const Contact = () => {
     };
 
     const sendConfirmationEmail = (recipientName, recipientEmail) => {
+        // Send confirmation email to the user
         emailjs.send('service_nj4aeh5', 'template_iv4xktv', {
             to_name: recipientName,
             to_email: recipientEmail,
@@ -54,13 +61,29 @@ const Contact = () => {
             );
     };
 
+    const saveFormDataToBackend = (name, email, subject, message) => {
+        // Send the form data to the backend (MongoDB)
+        axios.post('http://localhost:5000/api/contact', {
+            name,
+            email,
+            subject,
+            message,
+        })
+        .then(response => {
+            console.log('Form data saved:', response.data);
+        })
+        .catch(error => {
+            console.error('Error saving form data:', error);
+        });
+    };
+
     return (
         <div className='container contact-page text-[rgb(255,233,209)] px-6 h-full md:h-auto'>
             <div className='text-zone ml-6 w-full md:w-1/2 mb-10'>
                 <div style={{
-                        animation: `fadeInUp 1s ease-out forwards`,
-                        opacity: 0, 
-                     }}>
+                    animation: `fadeInUp 1s ease-out forwards`,
+                    opacity: 0,
+                }}>
                     <h1 className='text-2xl font-bold mt-10'>Contact Me</h1>
                     <p className='mt-4'>
                         I am actively looking for summer software engineering internships,
@@ -73,7 +96,7 @@ const Contact = () => {
                      style={{
                         animation: `fadeInUp 1s ease-out forwards`,
                         animationDelay: `0.5s`,
-                        opacity: 0, 
+                        opacity: 0,
                      }}>
                   <form ref={refForm} onSubmit={sendEmail} className='bg-[rgb(119,47,17)] px-5 pt-5 pb-10 rounded relative w-full h-full md:w-auto md:h-auto'>
                     <ul className='p-0 m-0'>
