@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 
-const ExperienceCard = ({ company, dates, description, delay }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
-  };
-
+const ExperienceCard = ({ company, dates, description, delay, isOpen, toggleExpand }) => {
   return (
     <div
       className={`w-full max-w-[400px] md:max-w-[500px] bg-[rgb(119,47,17)] rounded-lg relative cursor-pointer mx-auto transition-all duration-[2000ms] ease-in-out flex flex-col`}
@@ -20,10 +14,10 @@ const ExperienceCard = ({ company, dates, description, delay }) => {
     >
       <div
         className={`overflow-hidden transition-max-height transition-all duration-[2000ms] ease-in-out ${
-          isExpanded ? 'max-h-[1000px]' : 'max-h-[175px]'
+          isOpen ? 'max-h-[1000px]' : 'max-h-[175px]'
         }`}
       >
-        {!isExpanded ? (
+        {!isOpen ? (
           <>
             <div className="absolute top-[5px] left-[50%] transform -translate-x-1/2 text-xl">
               <FaArrowUp />
@@ -45,7 +39,8 @@ const ExperienceCard = ({ company, dates, description, delay }) => {
               {company}
             </p>
             <div className="pt-[2rem] pl-[1.5rem] pr-[2rem] text-white text-[16px] leading-relaxed flex-grow whitespace-pre-wrap break-words">
-              {description.split('\n').map((line, index) => (
+              {/* Render each description line as a separate paragraph */}
+              {description.map((line, index) => (
                 <p key={index} className="mb-2">
                   {line}
                 </p>
