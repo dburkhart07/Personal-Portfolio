@@ -6,6 +6,6 @@ const projectSchema = new mongoose.Schema({
   techStack: { type: [String], required: true },
   projectLink: { type: String, required: true},
   delay: { type: Number, required: true },
-});
+}, { collection: 'Projects' });
 
 module.exports = mongoose.model("Project", projectSchema);

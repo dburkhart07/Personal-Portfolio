@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import ProjectCard from './Reusables/ProjectCard'; 
+import ProjectCard from './Reusables/ProjectCard';  // Import your ProjectCard component
 import axios from 'axios';
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]); // State to store fetched projects
+  const [projects, setProjects] = useState([]);  // State to store fetched projects
 
   useEffect(() => {
     // Fetch project data from the backend
-    axios.get('http://localhost:5000/api/projects') // Backend endpoint
+    axios.get('http://localhost:5000/api/projects')  // Backend endpoint
       .then((response) => {
         // Directly map the response data to match the ProjectCard props
         const fetchedProjects = response.data.map((project) => ({
           title: project.title,
-          image: project.image, 
-          techStack: project.techStack.join(', '), // Convert tech stack array to string
+          image: project.image,
+          techStack: project.techStack.join(', '),  // Convert tech stack array to string
           projectLink: project.projectLink,
-          delay: project.delay, // Use delay as provided by the backend
+          delay: project.delay,  // Use delay as provided by the backend
         }));
-        setProjects(fetchedProjects); // Update state with mapped data
+        setProjects(fetchedProjects);  // Update state with mapped data
       })
       .catch((error) => console.error('Error fetching project data:', error));
   }, []);
