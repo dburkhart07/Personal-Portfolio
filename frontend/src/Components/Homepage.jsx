@@ -1,4 +1,3 @@
-// src/Pages/Homepage.js
 import React, { useState } from 'react';
 import Card from './Reusables/Card';
 import { IconCloudDemo } from './Reusables/IconCloudDemo'; 
@@ -6,7 +5,7 @@ import SkillsLanguage from './Reusables/SkillsLanguage';
 import ProfessionalPicture from '../Img/Professional Picture.jpg';
 
 function Homepage() {
-  const [selectedCategory, setSelectedCategory] = useState('languages'); // default to languages
+  const [selectedCategory, setSelectedCategory] = useState('languages');
 
   return (
     <section className="flex flex-col items-center bg-[rgb(85,17,0)] text-[rgb(255,233,209)] p-4">

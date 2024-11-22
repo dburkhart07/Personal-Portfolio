@@ -1,35 +1,48 @@
 import { IconCloud } from './IconCloud'; 
 
 const slugs = [
+  // Programming languages
   "typescript",
   "javascript",
-  "dart",
   "java",
+  "python",
+  "sql",
+  "cplusplus",
+  "csharp",
+  "r",
+  
+  // Frontend & Backend Frameworks/Tools
   "react",
-  "flutter",
-  "android",
-  "html5",
-  "css3",
   "nodedotjs",
   "express",
+  "spring",
   "nextdotjs",
-  "prisma",
-  "amazonaws",
-  "postgresql",
-  "firebase",
-  "nginx",
-  "vercel",
-  "testinglibrary",
-  "jest",
-  "cypress",
-  "docker",
+  "tailwindcss",
+  "mongodb",
+  "postman",
+  "pytorch",
+  "tensorflow",
+  "scikitlearn",
+  
+  // IDEs and collaboration tools
+  "visualstudiocode",
+  "intellijidea",
+  "jupyter",
+  "googlecolab",
+  "unity",
+  "rstudio",
+  
+  // Data analysis & visualization libraries
+  "matplotlib",
+  "pandas",
+  "numpy",
+  "seaborn",
+  
+  // Version control & office tools
   "git",
-  "jira",
   "github",
   "gitlab",
-  "visualstudiocode",
-  "androidstudio",
-  "sonarqube",
+  "microsoftoffice",
   "figma",
 ];
 

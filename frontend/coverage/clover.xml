@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1732243049332" clover="3.2.0">
+  <project timestamp="1732243049332" name="All files">
+    <metrics statements="5" coveredstatements="2" conditionals="12" coveredconditionals="7" methods="4" coveredmethods="1" elements="21" coveredelements="10" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
+    <file name="Homepage.jsx" path="C:\Users\Dalton\Documents\Personal Projcets (Real)\Personal Portfolio\frontend\src\Components\Homepage.jsx">
+      <metrics statements="5" coveredstatements="2" conditionals="12" coveredconditionals="7" methods="4" coveredmethods="1"/>
+      <line num="8" count="19" type="stmt"/>
+      <line num="10" count="18" type="stmt"/>
+      <line num="73" count="0" type="stmt"/>
+      <line num="79" count="0" type="stmt"/>
+      <line num="85" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>
