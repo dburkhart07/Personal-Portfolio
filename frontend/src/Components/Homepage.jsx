@@ -57,86 +57,86 @@ function Homepage() {
         {/* Card 3 - Switched Column Layout with Cloud */}
         <Card title="My Skills/Favorite Technologies" className="max-w-4xl mx-auto p-6">
           <div className="flex flex-col md:flex-row">
-            {/* Right Column - Icon Cloud (now at the bottom in mobile, hidden on mobile) */}
-            <div className="flex-1 flex justify-center items-center mt-10 md:mt-0 w-full md:w-1/2 icon-cloud-container md:order-2 order-last">
-              <div className="relative hidden md:block">
-                <IconCloudDemo />
+              {/* Left Column - Buttons, Skills, Navigation */}
+              <div className="flex-1 pb-[2rem] md:pb-0 w-full md:w-1/2 order-1">
+                  <div className="flex flex-col space-y-4">
+                      {/* Skill Category Buttons */}
+                      <div>
+                          <button
+                              onClick={() => setSelectedCategory('languages')}
+                              className={`px-4 py-2 mx-2 ${selectedCategory === 'languages' ? 'bg-orange-400' : 'bg-transparent'} text-white rounded-md`}
+                          >
+                              Languages
+                          </button>
+                          <button
+                              onClick={() => setSelectedCategory('frameworks')}
+                              className={`px-4 py-2 mx-2 ${selectedCategory === 'frameworks' ? 'bg-orange-400' : 'bg-transparent'} text-white rounded-md`}
+                          >
+                              Frameworks
+                          </button>
+                          <button
+                              onClick={() => setSelectedCategory('devtools')}
+                              className={`px-4 py-2 mx-2 ${selectedCategory === 'devtools' ? 'bg-orange-400' : 'bg-transparent'} text-white rounded-md`}
+                          >
+                              Developer Tools
+                          </button>
+                      </div>
+
+                      {/* Skills Language Section */}
+                      <div className="pb-[2rem]">
+                          {selectedCategory === 'languages' && (
+                              <SkillsLanguage
+                                  skills={[
+                                      { name: 'Java: 5 years', level: '100%', color: 'bg-[#ff5733]' },
+                                      { name: 'Python: 4 years', level: '80%', color: 'bg-[#f9a825]' },
+                                      { name: 'HTML/CSS/JS: 2 years', level: '40%', color: 'bg-[#8e44ad]' },
+                                      { name: 'C: 1.5 years', level: '30%', color: 'bg-[#3b3f42]' },
+                                      { name: 'TypeScript: 1 year', level: '20%', color: 'bg-[#00bcd4]' }
+                                  ]}
+                              />
+                          )}
+                          {selectedCategory === 'frameworks' && (
+                              <SkillsLanguage
+                                  skills={[
+                                      { name: 'React: 2 years', level: '100%', color: 'bg-[#ff5733]' },
+                                      { name: 'Tensorflow: 2 years', level: '100%', color: 'bg-[#f9a825]' },
+                                      { name: 'Tailwind: 1 year', level: '50%', color: 'bg-[#8e44ad]' },
+                                      { name: 'Express: 1 year', level: '50%', color: 'bg-[#3b3f42]' },
+                                      { name: 'Springboot: 1 year', level: '50%', color: 'bg-[#00bcd4]' }
+                                  ]}
+                              />
+                          )}
+                          {selectedCategory === 'devtools' && (
+                              <SkillsLanguage
+                                  skills={[
+                                      { name: 'Git: 3 years', level: '100%', color: 'bg-[#ff5733]' },
+                                      { name: 'GitHub: 3 years', level: '100%', color: 'bg-[#f9a825]' },
+                                      { name: 'VSCode: 3 years', level: '100%', color: 'bg-[#8e44ad]' },
+                                      { name: 'IntelliJ: 2 years', level: '66.7%', color: 'bg-[#3b3f42]' },
+                                      { name: 'Postman: 2 years', level: '66.7%', color: 'bg-[#00bcd4]' }
+                                  ]}
+                              />
+                          )}
+                      </div>
+
+                      {/* Navigation Links */}
+                      <div className="flex space-x-4 mt-8">
+                          <a href="projects" className="bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-md px-6 py-2 transition duration-300 hover:bg-orange-500">
+                              See my Projects
+                          </a>
+                          <a href="experience" className="bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-md px-6 py-2 transition duration-300 hover:bg-orange-500">
+                              View my Experience
+                          </a>
+                      </div>
+                  </div>
               </div>
-            </div>
 
-            {/* Left Column - Buttons, Skills, Navigation */}
-            <div className="flex-1 pb-[2rem] md:pb-0 w-full md:w-1/2 md:order-1 order-first">
-              <div className="flex flex-col space-y-4">
-                {/* Skill Category Buttons */}
-                <div>
-                  <button
-                    onClick={() => setSelectedCategory('languages')}
-                    className={`px-4 py-2 mx-2 ${selectedCategory === 'languages' ? 'bg-orange-400' : 'bg-transparent'} text-white rounded-md`}
-                  >
-                    Languages
-                  </button>
-                  <button
-                    onClick={() => setSelectedCategory('frameworks')}
-                    className={`px-4 py-2 mx-2 ${selectedCategory === 'frameworks' ? 'bg-orange-400' : 'bg-transparent'} text-white rounded-md`}
-                  >
-                    Frameworks
-                  </button>
-                  <button
-                    onClick={() => setSelectedCategory('devtools')}
-                    className={`px-4 py-2 mx-2 ${selectedCategory === 'devtools' ? 'bg-orange-400' : 'bg-transparent'} text-white rounded-md`}
-                  >
-                    Developer Tools
-                  </button>
-                </div>
-
-                {/* Skills Language Section */}
-                <div className="pb-[2rem]">
-                  {selectedCategory === 'languages' && (
-                    <SkillsLanguage
-                      skills={[ 
-                        { name: 'Java: 5 years', level: '100%', color: 'bg-[#ff5733]' },
-                        { name: 'Python: 4 years', level: '80%', color: 'bg-[#f9a825]' },
-                        { name: 'HTML/CSS/JS: 2 years', level: '40%', color: 'bg-[#8e44ad]' },
-                        { name: 'C: 1.5 years', level: '30%', color: 'bg-[#3b3f42]' },
-                        { name: 'TypeScript: 1 year', level: '20%', color: 'bg-[#00bcd4]' }
-                      ]}
-                    />
-                  )}
-                  {selectedCategory === 'frameworks' && (
-                    <SkillsLanguage
-                      skills={[ 
-                        { name: 'React: 2 years', level: '100%', color: 'bg-[#ff5733]' },
-                        { name: 'Tensorflow: 2 years', level: '100%', color: 'bg-[#f9a825]' },
-                        { name: 'Tailwind: 1 year', level: '50%', color: 'bg-[#8e44ad]' },
-                        { name: 'Express: 1 year', level: '50%', color: 'bg-[#3b3f42]' },
-                        { name: 'Springboot: 1 year', level: '50%', color: 'bg-[#00bcd4]' }
-                      ]}
-                    />
-                  )}
-                  {selectedCategory === 'devtools' && (
-                    <SkillsLanguage
-                      skills={[ 
-                        { name: 'Git: 3 years', level: '100%', color: 'bg-[#ff5733]' },
-                        { name: 'GitHub: 3 years', level: '100%', color: 'bg-[#f9a825]' },
-                        { name: 'VSCode: 3 years', level: '100%', color: 'bg-[#8e44ad]' },
-                        { name: 'IntelliJ: 2 years', level: '66.7%', color: 'bg-[#3b3f42]' },
-                        { name: 'Postman: 2 years', level: '66.7%', color: 'bg-[#00bcd4]' }
-                      ]}
-                    />
-                  )}
-                </div>
-
-                {/* Navigation Links */}
-                <div className="flex space-x-4 mt-8">
-                  <a href="projects" className="bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-md px-6 py-2 transition duration-300 hover:bg-orange-500">
-                    See my Projects
-                  </a>
-                  <a href="experience" className="bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-md px-6 py-2 transition duration-300 hover:bg-orange-500">
-                    View my Experience
-                  </a>
+              {/* Right Column - Icon Cloud */}
+              <div className="flex-1 flex items-center justify-center mt-10 md:mt-0 w-full md:w-full order-2 md:order-2">
+                <div className="relative mx-auto w-full md:block">
+                    <IconCloudDemo />
                 </div>
               </div>
-            </div>
           </div>
         </Card>
       </div>

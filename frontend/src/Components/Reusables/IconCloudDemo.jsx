@@ -48,8 +48,10 @@ const slugs = [
 
 export function IconCloudDemo() {
   return (
-    <div className="relative flex max-w-[80%] ml-20 items-center justify-center overflow-hidden rounded-lg bg-background px-20 pb-20 pt-8">
+    <div className="relative flex items-center justify-center overflow-hidden rounded-lg bg-background mx-auto transition-all duration-300 ease-in-out"
+         style={{ width: '60%', maxWidth: '600px', aspectRatio: '1 / 1' }}>
       <IconCloud iconSlugs={slugs} />
     </div>
   );
 }
+
