@@ -171,3 +171,33 @@
     animation-timing-function: ease-in;
   }
 }
+
+@keyframes envelopeOpen {
+  0%, 100% {
+    transform: scale(1);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  25% {
+    transform: scale(1.05);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%);
+  }
+  50% {
+    transform: scale(1.05);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 70%);
+  }
+  75% {
+    transform: scale(1);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%);
+  }
+}
+
+@keyframes letterSlide {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-120%);
+    opacity: 1;
+  }
+}

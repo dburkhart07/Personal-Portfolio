@@ -65,7 +65,6 @@ export function IconCloud({ iconSlugs }) {
   }, [data, theme]);
 
   return (
-    // @ts-ignore
     <Cloud {...cloudProps}>
       <>{renderedIcons}</>
     </Cloud>
