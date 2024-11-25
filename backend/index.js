@@ -8,9 +8,8 @@ const contactRoutes = require('./routes/contact');
 
 const app = express();
 
-// Enable CORS for frontend (localhost:3000)
 app.use(cors({
-  origin: 'http://localhost:3000', 
+  origin: 'https://dalton-burkhart.onrender.com/', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
