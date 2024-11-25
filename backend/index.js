@@ -9,7 +9,7 @@ const contactRoutes = require('./routes/contact');
 const app = express();
 
 app.use(cors({
-  origin: 'https://dalton-burkhart.onrender.com/', 
+  origin: 'https://dalton-burkhart.onrender.com', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
