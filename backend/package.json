@@ -10,6 +10,7 @@
     "supertest": "^7.0.0"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "jest"
   }
 }
