@@ -84,11 +84,12 @@ const Contact = () => {
                         opacity: 0,
                     }}>
                         <h1 className='text-2xl font-bold mt-10'>Contact Me</h1>
+                        <p className="mt-4">Thank you for you interest in getting in touch!</p>
                         <p className='mt-4'>
-                            I am actively looking for summer software engineering internships,
+                            I am actively looking for summer/fall software engineering/data science internships,
                             as well as any opportunities to work on fun, innovative projects.
-                            If you have any questions or are interested in getting in touch,
-                            please fill out the form below.
+                            I value strong, open communication, and welcome any questions or feedback you may have as well.
+                            Please do not hesitate to reach out by filling out the form below
                         </p>
                     </div>
                     <div className='contact-form mt-5'

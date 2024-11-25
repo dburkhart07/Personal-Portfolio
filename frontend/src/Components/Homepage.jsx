@@ -3,6 +3,10 @@ import Card from './Reusables/Card';
 import { IconCloudDemo } from './Reusables/IconCloudDemo'; 
 import SkillsLanguage from './Reusables/SkillsLanguage';
 import ProfessionalPicture from '../Img/Professional Picture.jpg';
+import { memo } from 'react';
+
+
+const MemoizedIconCloudDemo = memo(IconCloudDemo);
 
 function Homepage() {
   const [selectedCategory, setSelectedCategory] = useState('languages');
@@ -134,7 +138,7 @@ function Homepage() {
               {/* Right Column - Icon Cloud */}
               <div className="flex-1 flex items-center justify-center mt-10 md:mt-0 w-full md:w-full order-2 md:order-2">
                 <div className="relative mx-auto w-full md:block">
-                    <IconCloudDemo />
+                    <MemoizedIconCloudDemo />
                 </div>
               </div>
           </div>
