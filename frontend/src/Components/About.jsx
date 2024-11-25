@@ -1,7 +1,25 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import Song from './Reusables/Song';
+import axios from 'axios';
 
 const About = () => {
+  const [songs, setSongs] = useState([]);  // State to store fetched songs
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/songs')  // Backend endpoint
+      .then((response) => {
+        const fetchedSongs = response.data.map((song) => ({
+          embedUrl: song.embedUrl,  // Correctly map the embedUrl
+          delay: song.delay,         // Correctly map the delay
+        }));
+        setSongs(fetchedSongs);  // Update state with mapped data
+        console.log(fetchedSongs);
+      })
+      .catch((error) => console.error('Error fetching song data:', error));
+  }, []);
+  
+
   return (
     <div className="min-h-screen bg-[rgb(85,17,0)] text-[rgb(255,233,209)] p-8 flex justify-center">
       <div className="w-full max-w-3xl space-y-8">
@@ -48,11 +66,12 @@ const About = () => {
             <h4 className="text-2xl font-semibold mb-4">Songs and Artists</h4>
             <p>The current songs I like changes very often, but these are some of my favorites currently</p>
           </div>
-          <Song embedUrl="https://open.spotify.com/embed/track/3n3Ppam7vgaVa1iaRUc9Lp" delay = {1.7} />
-          <Song embedUrl="https://open.spotify.com/embed/track/7uY7jZs5srSx3xMmyCI48T" delay = {1.9} />
-          <Song embedUrl="https://open.spotify.com/embed/track/32iNr3J93tqFkxaMYwdRYi" delay = {2.1} />
-          <Song embedUrl="https://open.spotify.com/embed/track/3GZD6HmiNUhxXYf8Gch723" delay = {2.3} />
-          <Song embedUrl="https://open.spotify.com/embed/track/5IhzJOXNE7ki0IIJbZbnGq" delay = {2.5} />
+          {songs.map((song, index) => (
+            <Song
+              embedUrl={song.embedUrl}
+              delay={song.delay}
+            />
+          ))}
           <br />
           <div className="fade-in" style = {{ animationDelay: '3s' }}>
             <p>Some of my favorite artists of all time</p>

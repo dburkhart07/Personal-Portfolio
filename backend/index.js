@@ -3,6 +3,7 @@ const cors = require('cors');
 const connectDB = require('./db'); 
 const projectRoutes = require('./routes/project'); 
 const experienceRoutes = require('./routes/experience');
+const songRoutes = require('./routes/song')
 const contactRoutes = require('./routes/contact');
 
 const app = express();
@@ -23,6 +24,7 @@ app.use(express.json()); // Parse JSON requests
 // API Routes
 app.use('/api/projects', projectRoutes); 
 app.use('/api/experience', experienceRoutes);
+app.use('/api/songs', songRoutes);
 app.use('/api/contact', contactRoutes);
 
 // Start the server
