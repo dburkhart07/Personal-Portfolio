@@ -6,8 +6,10 @@ import axios from 'axios';
 const About = () => {
   const [songs, setSongs] = useState([]);  // State to store fetched songs
 
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+
   useEffect(() => {
-    axios.get('http://localhost:5000/api/songs')  // Backend endpoint
+    axios.get(`${API_BASE_URL}/api/songs`)  // Backend endpoint
       .then((response) => {
         const fetchedSongs = response.data.map((song) => ({
           embedUrl: song.embedUrl,  // Correctly map the embedUrl

@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Contact = () => {
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000"; 
+
     const refForm = useRef();
     const navigate = useNavigate();
 
@@ -60,7 +62,7 @@ const Contact = () => {
     };
 
     const saveFormDataToBackend = (name, email, subject, message) => {
-        axios.post('http://localhost:5000/api/contact', {
+        axios.post(`${API_BASE_URL}/api/contact`, {
             name,
             email,
             subject,

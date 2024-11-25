@@ -3,11 +3,12 @@ import ProjectCard from './Reusables/ProjectCard';  // Import your ProjectCard c
 import axios from 'axios';
 
 const Projects = () => {
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
   const [projects, setProjects] = useState([]);  // State to store fetched projects
 
   useEffect(() => {
     // Fetch project data from the backend
-    axios.get('http://localhost:5000/api/projects')  // Backend endpoint
+    axios.get(`${API_BASE_URL}/api/projects`)  // Backend endpoint
       .then((response) => {
         // Directly map the response data to match the ProjectCard props
         const fetchedProjects = response.data.map((project) => ({

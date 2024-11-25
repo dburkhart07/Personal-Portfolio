@@ -4,12 +4,13 @@ import ExperienceCard from './Reusables/ExperienceCard'; // Assuming you have th
 import ExpImg from '../Img/experience_bg.svg'; // Background image for experience section
 
 const Experience = () => {
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
   const [experience, setExperience] = useState([]); // State to store experience data
   const [openIndex, setOpenIndex] = useState(null); // State to store which card is open
 
   useEffect(() => {
     // Fetch experience data from the backend
-    axios.get('http://localhost:5000/api/experience')
+    axios.get(`${API_BASE_URL}/api/experience`)
       .then((response) => {
         const fetchedExperience = response.data.map((exp) => ({
           company: exp.company,
