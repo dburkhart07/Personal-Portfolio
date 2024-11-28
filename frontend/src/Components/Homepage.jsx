@@ -23,11 +23,11 @@ function Homepage() {
               <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-red-500 mb-10 ml-4">
                 Software Developer
               </h2>
-              <a href="contact" className="flex items-center ml-5 mt-20">
+              <NavLink to="/contact" className="flex items-center ml-5 mt-20">
                 <div className="bg-gradient-to-r from-orange-400 to-red-500 rounded-md flex justify-center items-center transition duration-300 px-4 py-2">
                   Contact Me
                 </div>
-              </a>
+              </NavLink>
             </div>
             <div className="flex-1 flex justify-center md:ml-10 md:-mt-10 mt-5">
               <img
