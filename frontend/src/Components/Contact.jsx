@@ -91,7 +91,7 @@ const Contact = () => {
                             I am actively looking for summer/fall software engineering/data science internships,
                             as well as any opportunities to work on fun, innovative projects.
                             I value strong, open communication, and welcome any questions or feedback you may have as well.
-                            Please do not hesitate to reach out by filling out the form below
+                            Please do not hesitate to reach out by filling out the form below!
                         </p>
                     </div>
                     <div className='contact-form mt-5'
