@@ -60,7 +60,7 @@ function Homepage() {
         </Card>
 
         {/* Card 3 - Switched Column Layout with Cloud */}
-        <Card title="My Skills/Favorite Technologies" className="max-w-4xl mx-auto p-6">
+        <Card title="My Skills/Favorite Technologies" className="max-w-4xl mx-auto p-6" delay={1}>
           <div className="flex flex-col md:flex-row">
               {/* Left Column - Buttons, Skills, Navigation */}
               <div className="flex-1 pb-[2rem] md:pb-0 w-full md:w-1/2 order-1">
