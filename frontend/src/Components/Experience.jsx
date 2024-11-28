@@ -29,37 +29,37 @@ const Experience = () => {
   };
 
   return (
-    <div className="bg-[rgb(85,17,0)] text-[rgb(255,233,209)] pt-[3rem] px-[1rem] sm:pl-[2rem] md:pl-[4rem] lg:pl-[6rem] md:pt-[4rem] pb-[10rem]">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 text-center md:text-left">
+    <div className="bg-[rgb(85,17,0)] text-[rgb(255,233,209)] pt-[3rem] pl-[6rem] md:pt-[4rem] pb-[10rem]">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10">
         Work Experience
       </h1>
       <div className="flex flex-col lg:flex-row">
         {/* Left Column - Experience Cards */}
         <div className="w-full lg:w-1/2">
-          {/* Scrollable container for experiences */}
-          <div className="h-[30rem] overflow-hidden space-y-4">
-            {/* Map through experiences and render each card */}
-            {experience.map((exp, index) => (
-              <div
-                key={index}
-                className="transition-opacity duration-500 opacity-0 lg:opacity-100"
-                style={{ animation: `fadeInUp ${exp.delay}s ease-out forwards` }}
-              >
-                <ExperienceCard
-                  company={exp.company}
-                  dates={exp.dates}
-                  description={exp.description}
-                  delay={exp.delay}
-                  isOpen={openIndex === index}  // Determine if the card is open
-                  toggleExpand={() => toggleCard(index)}  // Toggle the open card
-                />
-              </div>
-            ))}
+          {/* Scrollable container for experience */}
+          <div className="h-[30rem] overflow-y-auto space-y-4 scrollbar-none">
+          {/* Map through experiences and render each card */}
+          {experience.map((exp, index) => (
+            <div
+              key={index}
+              className="transition-opacity duration-500 opacity-0 lg:opacity-100"
+              style={{ animation: `fadeInUp ${exp.delay}s ease-out forwards` }}
+            >
+              <ExperienceCard
+                company={exp.company}
+                dates={exp.dates}
+                description={exp.description}
+                delay={exp.delay}
+                isOpen={openIndex === index}  // Determine if the card is open
+                toggleExpand={() => toggleCard(index)}  // Toggle the open card
+              />
+            </div>
+          ))}
           </div>
         </div>
 
         {/* Right Column - Background Image */}
-        <div className="relative w-full lg:w-1/2 mt-8 lg:mt-0 flex justify-center items-center"
+        <div className="relative w-full lg:w-1/2 mt-8 lg:mt-0"
              style={{
                animation: `fadeInUp 2.5s ease-out forwards`,
                opacity: 0, // Start with an invisible state
