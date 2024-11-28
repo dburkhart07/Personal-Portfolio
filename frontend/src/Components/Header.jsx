@@ -13,7 +13,7 @@ function Header() {
 
   return (
     <header className="bg-[rgb(102,34,0)] text-[rgb(255,233,209)] py-4">
-      <nav className="container mx-auto flex justify-between">
+      <nav className="container mx-auto flex justify-between px-4 md:px-8">
         <h1 className="text-2xl font-bold">My Portfolio</h1>
         {/* Hamburger icon */}
         <div className="md:hidden items-center">

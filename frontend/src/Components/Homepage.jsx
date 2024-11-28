@@ -17,7 +17,7 @@ function Homepage() {
         {/* Card 1 */}
         <Card
           title="Hi, I'm Dalton!"
-          className="w-full max-w-[90%] md:max-w-[60%] mx-auto"
+          className="w-full md:max-w-[75%] mx-auto"
         >
           <div className="flex flex-col md:flex-row items-start">
             <div className="flex-1">
@@ -44,7 +44,7 @@ function Homepage() {
         <Card
           title="Who am I"
           delay={0.5}
-          className="w-full max-w-[90%] md:max-w-[60%] mx-auto"
+          className="w-full md:max-w-[75%] mx-auto"
         >
           <div className="flex flex-col md:flex-row justify-center items-center">
             <div className="w-full md:w-1/2 pr-4">
@@ -68,7 +68,7 @@ function Homepage() {
         <Card
           title="My Skills/Favorite Technologies"
           delay={1}
-          className="w-full max-w-[90%] md:max-w-[60%] mx-auto"
+          className="w-full md:max-w-[75%] mx-auto"
         >
           <div className="flex flex-col md:flex-row">
             {/* Left Column - Buttons, Skills, Navigation */}
