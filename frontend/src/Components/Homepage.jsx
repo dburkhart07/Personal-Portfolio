@@ -15,9 +15,9 @@ function Homepage() {
   return (
     <section className="flex flex-col items-center bg-[rgb(85,17,0)] text-[rgb(255,233,209)] p-4">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Welcome to Dalton's Website</h1>
-      <div className="grid grid-cols-1 gap-[50px] px-4 md:px-50">
+      <div className="grid grid-cols-1 gap-[50px] px-4 md:px-20">
         {/* Card 1 */}
-        <Card title="Hi, I'm Dalton!">
+        <Card className="w-[80%] md:w-full mx-auto px-4" title="Hi, I'm Dalton!">
           <div className="flex flex-col md:flex-row items-start">
             <div className="flex-1">
               <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-red-500 mb-10 ml-4">
@@ -40,7 +40,7 @@ function Homepage() {
         </Card>
 
         {/* Card 2 */}
-        <Card title="Who am I" delay={0.5}>
+        <Card className="w-[80%] md:w-full mx-auto px-4" title="Who am I" delay={0.5}>
           <div className="flex flex-col md:flex-row justify-center items-center">
             <div className="w-full md:w-1/2 pr-4">
               <p className="text-[24px] ml-5 mr-5 mb-5 md:mr-20">
@@ -60,7 +60,7 @@ function Homepage() {
         </Card>
 
         {/* Card 3 - Switched Column Layout with Cloud */}
-        <Card title="My Skills/Favorite Technologies" className="max-w-4xl mx-auto p-6" delay={1}>
+        <Card className="w-[80%] md:w-full mx-auto px-4 max-w-4xl mx-auto p-6" title="My Skills/Favorite Technologies" delay={1}>
           <div className="flex flex-col md:flex-row">
               {/* Left Column - Buttons, Skills, Navigation */}
               <div className="flex-1 pb-[2rem] md:pb-0 w-full md:w-1/2 order-1">
