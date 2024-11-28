@@ -15,7 +15,7 @@ function Homepage() {
   return (
     <section className="flex flex-col items-center bg-[rgb(85,17,0)] text-[rgb(255,233,209)] p-4">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Welcome to Dalton's Website</h1>
-      <div className="grid grid-cols-1 gap-[50px] px-4 md:px-20">
+      <div className="grid grid-cols-1 gap-[50px] px-4 md:px-50">
         {/* Card 1 */}
         <Card title="Hi, I'm Dalton!">
           <div className="flex flex-col md:flex-row items-start">
