@@ -21,18 +21,18 @@ const ProjectCard = ({ title, image, techStack, projectLink, delay }) => {
         {/* Background Gradient (Yellow to Black) on Hover */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-yellow-400 to-black opacity-0 group-hover:opacity-80 transition-all duration-300"></div>
 
-        {/* Dark Background for Tech Stack */}
-        <div className="absolute bottom-0 left-0 w-full px-4 py-10 bg-black opacity-60 group-hover:opacity-0 transition-all duration-300"></div>
-
         {/* Content Container */}
-        <div className="absolute bottom-0 left-0 w-full px-4 py-4 transition-all duration-300">
-          {/* Tech Stack (Moves Up on Hover) */}
-          <p className="text-2xl text-white group-hover:translate-y-[-4rem] transition-all duration-300">
-            {title}
-          </p>
-          <p className="text-md text-white group-hover:translate-y-[-3rem] transition-all duration-300">
-            {techStack}
-          </p>
+        <div className="absolute bottom-0 left-0 w-full px-4 py-4 transition-all duration-300 flex flex-col justify-end">
+          {/* Dark Background for Tech Stack */}
+          <div className="bg-black opacity-60 group-hover:opacity-0 transition-all duration-300 px-4 py-2">
+            {/* Tech Stack (Moves Up on Hover) */}
+            <p className="text-2xl text-white group-hover:translate-y-[-4rem] transition-all duration-300">
+              {title}
+            </p>
+            <p className="text-md text-white group-hover:translate-y-[-3rem] transition-all duration-300">
+              {techStack}
+            </p>
+          </div>
 
           {/* "View" Button */}
           <a
