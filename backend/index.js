@@ -5,6 +5,7 @@ const projectRoutes = require('./routes/project');
 const experienceRoutes = require('./routes/experience');
 const songRoutes = require('./routes/song')
 const contactRoutes = require('./routes/contact');
+require('dotenv').config();
 
 const app = express();
 
