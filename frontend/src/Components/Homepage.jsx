@@ -49,11 +49,11 @@ function Homepage() {
               </p>
             </div>
             <div className="w-full md:w-1/2 flex items-center justify-center relative">
-              <a href="about">
+              <NavLink to="/about">
                 <h1 className="text-[72px] font-bold animate-gradient-text text-center">
                   Learn more about me!
                 </h1>
-              </a>
+              </NavLink>
             </div>
           </div>
         </Card>

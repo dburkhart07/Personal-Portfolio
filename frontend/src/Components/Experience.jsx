@@ -33,9 +33,9 @@ const Experience = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10">
         Work Experience
       </h1>
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row justify-center lg:justify-between">
         {/* Left Column - Experience Cards */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 px-4">
           {/* Scrollable container for experience */}
           <div className="h-[30rem] overflow-y-auto space-y-4 scrollbar-none">
           {/* Map through experiences and render each card */}
@@ -59,7 +59,7 @@ const Experience = () => {
         </div>
 
         {/* Right Column - Background Image */}
-        <div className="relative w-full lg:w-1/2 mt-8 lg:mt-0"
+        <div className="relative w-full lg:w-1/2 mt-8 lg:mt-0 px-4"
              style={{
                animation: `fadeInUp 2.5s ease-out forwards`,
                opacity: 0, // Start with an invisible state
