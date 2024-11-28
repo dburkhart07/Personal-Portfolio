@@ -35,7 +35,9 @@ const Experience = () => {
       </h1>
       <div className="flex flex-col lg:flex-row">
         {/* Left Column - Experience Cards */}
-        <div className="w-full lg:w-1/2 flex flex-col space-y-8">
+        <div className="w-full lg:w-1/2">
+          {/* Scrollable container for experience */}
+          <div className="h-[30rem] overflow-y-auto space-y-4">
           {/* Map through experiences and render each card */}
           {experience.map((exp, index) => (
             <div
@@ -53,6 +55,7 @@ const Experience = () => {
               />
             </div>
           ))}
+          </div>
         </div>
 
         {/* Right Column - Background Image */}
