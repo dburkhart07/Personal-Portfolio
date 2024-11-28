@@ -125,12 +125,12 @@ function Homepage() {
 
                       {/* Navigation Links */}
                       <div className="flex space-x-4 mt-8">
-                          <a href="projects" className="bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-md px-6 py-2 transition duration-300 hover:bg-orange-500">
+                          <NavLink to="/projects" className="bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-md px-6 py-2 transition duration-300 hover:bg-orange-500">
                               See my Projects
-                          </a>
-                          <a href="experience" className="bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-md px-6 py-2 transition duration-300 hover:bg-orange-500">
+                          </NavLink>
+                          <NavLink to="/experience" className="bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-md px-6 py-2 transition duration-300 hover:bg-orange-500">
                               View my Experience
-                          </a>
+                          </NavLink>
                       </div>
                   </div>
               </div>
