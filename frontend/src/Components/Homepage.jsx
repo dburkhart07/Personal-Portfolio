@@ -13,11 +13,11 @@ function Homepage() {
   return (
     <section className="flex flex-col items-center bg-[rgb(85,17,0)] text-[rgb(255,233,209)] p-4">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Welcome to Dalton's Website</h1>
-      <div className="flex flex-col items-center space-y-8">
+      <div className="flex flex-col items-center space-y-8 w-full">
         {/* Card 1 */}
         <Card
           title="Hi, I'm Dalton!"
-          className="w-full md:max-w-[75%] mx-auto"
+          className="w-4/5 max-w-screen-lg mx-auto"
         >
           <div className="flex flex-col md:flex-row items-start">
             <div className="flex-1">
@@ -44,7 +44,7 @@ function Homepage() {
         <Card
           title="Who am I"
           delay={0.5}
-          className="w-full md:max-w-[75%] mx-auto"
+          className="w-4/5 max-w-screen-lg mx-auto"
         >
           <div className="flex flex-col md:flex-row justify-center items-center">
             <div className="w-full md:w-1/2 pr-4">
@@ -68,7 +68,7 @@ function Homepage() {
         <Card
           title="My Skills/Favorite Technologies"
           delay={1}
-          className="w-full md:max-w-[75%] mx-auto"
+          className="w-4/5 max-w-screen-lg mx-auto"
         >
           <div className="flex flex-col md:flex-row">
             {/* Left Column - Buttons, Skills, Navigation */}
