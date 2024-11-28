@@ -13,7 +13,7 @@ function Homepage() {
   const [selectedCategory, setSelectedCategory] = useState('languages');
 
   return (
-    <section className="flex flex-col items-center bg-[rgb(85,17,0)] text-[rgb(255,233,209)] p-4">
+    <section className="flex flex-col items-center bg-[rgb(85,17,0)] text-[rgb(255,233,209)] pt-6 p-4">
       <div className="grid grid-cols-1 gap-[50px] px-4 md:px-20">
         {/* Card 1 */}
         <Card className="w-full md: w-[80%] mx-auto px-4" title="Hi, I'm Dalton!">
