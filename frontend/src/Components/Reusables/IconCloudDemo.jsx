@@ -19,7 +19,7 @@ const slugs = [
   "nextdotjs",
   "tailwindcss",
   "mongodb",
-  "postgres",
+  "postgresql",
   "postman",
   "pytorch",
   "tensorflow",
