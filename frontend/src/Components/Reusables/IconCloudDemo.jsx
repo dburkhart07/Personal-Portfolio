@@ -10,6 +10,8 @@ const slugs = [
   "cplusplus",
   "csharp",
   "r",
+  "html5",
+  "css3",
   
   // Frontend & Backend Frameworks/Tools
   "react",
