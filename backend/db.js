@@ -3,6 +3,7 @@ require('dotenv').config();
 
 const connectDB = async () => {
   try {
+    // Confirm database key is defined
     const dbURI = process.env.MONGO_URI;
     if (!dbURI) {
       console.error('MONGO_URI is not defined in your .env file');
