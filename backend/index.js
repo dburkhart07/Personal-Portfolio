@@ -10,7 +10,7 @@ require('dotenv').config();
 const app = express();
 
 const allowedOrigins = [
-  'https://dalton-burkhart.onrender.com',
+  'https://dalton-burkhart.up.railway.app',
 ];
 
 app.use(cors({
