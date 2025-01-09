@@ -33,7 +33,6 @@ const Contact = () => {
         emailjs.sendForm('service_nj4aeh5', 'template_ogqgudi', refForm.current, 'cY2UcSIMLnEaSJ-1P')
             .then(
                 (response) => {
-                    saveFormDataToBackend(name, email, subject, message);
                     sendConfirmationEmail(name, email);
                     navigate('../Confirmation');
                 },
