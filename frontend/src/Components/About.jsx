@@ -1,27 +1,30 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
 import Song from './Reusables/Song';
-import axios from 'axios';
+
+const songs = [
+  {
+    embedUrl: "https://open.spotify.com/embed/track/0m42DJCE0URRwRiRMOT1bu",
+    delay: 1.6,
+  },
+  {
+    embedUrl: "https://open.spotify.com/embed/track/7uY7jZs5srSx3xMmyCI48T",
+    delay: 1.7,
+  },
+  {   
+    embedUrl: "https://open.spotify.com/embed/track/32iNr3J93tqFkxaMYwdRYi",
+    delay: 1.8,
+  },
+  {
+    embedUrl: "https://open.spotify.com/embed/track/5IhzJOXNE7ki0IIJbZbnGq",
+    delay: 1.9,
+  },
+  {
+    embedUrl: "https://open.spotify.com/embed/track/3GZD6HmiNUhxXYf8Gch723",
+    delay: 2,
+  },
+];
 
 const About = () => {
-  const [songs, setSongs] = useState([]);  // State to store fetched songs
-
-  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
-
-  useEffect(() => {
-    axios.get(`${API_BASE_URL}/api/songs`)  // Backend endpoint
-      .then((response) => {
-        const fetchedSongs = response.data.map((song) => ({
-          embedUrl: song.embedUrl,  // Correctly map the embedUrl
-          delay: song.delay,         // Correctly map the delay
-        }));
-        setSongs(fetchedSongs);  // Update state with mapped data
-        console.log(fetchedSongs);
-      })
-      .catch((error) => console.error('Error fetching song data:', error));
-  }, []);
-  
-
   return (
     <div className="min-h-screen bg-[rgb(85,17,0)] text-[rgb(255,233,209)] p-8 flex justify-center">
       <div className="w-full max-w-3xl space-y-8">

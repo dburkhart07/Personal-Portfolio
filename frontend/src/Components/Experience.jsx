@@ -1,27 +1,51 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import ExperienceCard from './Reusables/ExperienceCard'; // Assuming you have this component
-import ExpImg from '../Img/experience_bg.svg'; // Background image for experience section
+import ExperienceCard from './Reusables/ExperienceCard';
+import ExpImg from '../Img/experience_bg.svg';
+
+const experiences = [
+  {
+      company: "Wind River Environmental",
+      dates: "May 2024 - August 2024",
+      description: [
+          "Leveraged Excel and the company database to clean over 25,000 customer records for improved reporting accuracy.",
+          "Performed monthly analyses using Excel, visually categorizing customer behavior trends to inform management decisions.",
+          "Utilized Microsoft Office tools to combine 15 training documents into a consolidated, user-friendly format for employee use."
+      ],
+      delay: 0.5
+  },
+  {
+      company: "Code Ninjas",
+      dates: "June 2024 - August 2024",
+      description: [
+          "Mastered and delivered 4 in-depth course curricula to 40 kids over 6 weeks, fostering an engaging learning environment.",
+          "Taught topics about video game modding using MCreator and Minecraft Education Edition, inspiring creativity and technical skills."
+      ],
+      delay: 1
+  },
+  {
+      company: "Worcester Polytechnic Institute's Research Lab",
+      dates: "October 2023 - May 2024",
+      description: [
+          "Examined the usage of large language models and the OpenAI API to generate diverse datasets for research projects.",
+          "Studied academic articles involving the use of machine learning to enhance educational platforms and tools."
+      ],
+      delay: 1.5
+  },
+  {
+      company: "Assistments",
+      dates: "September 2023 - May 2024",
+      description: [
+          "Created training datasets for a model to use object recognition of different math problem types.",
+          "Utilized the makesense.ai platform to markup math problems using 1 of 5 defined categories for training data purposes.",
+          "Supported a platform used by 130,000 students and 3,000 teachers monthly to gather unique datasets for machine learning research."
+      ],
+      delay: 2
+  }
+];
+
 
 const Experience = () => {
-  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
-  const [experience, setExperience] = useState([]); // State to store experience data
   const [openIndex, setOpenIndex] = useState(null); // State to store which card is open
-
-  useEffect(() => {
-    // Fetch experience data from the backend
-    axios.get(`${API_BASE_URL}/api/experience`)
-      .then((response) => {
-        const fetchedExperience = response.data.map((exp) => ({
-          company: exp.company,
-          dates: exp.dates,
-          description: exp.description,
-          delay: exp.delay,
-        }));
-        setExperience(fetchedExperience); // Update state with fetched data
-      })
-      .catch((error) => console.error('Error fetching experience data:', error));
-  }, []);
 
   const toggleCard = (index) => {
     // Toggle card visibility: if the clicked card is already open, close it; otherwise, open it.
@@ -39,7 +63,7 @@ const Experience = () => {
           {/* Scrollable container for experience */}
           <div className="h-[30rem] overflow-y-auto space-y-4 scrollbar-none">
           {/* Map through experiences and render each card */}
-          {experience.map((exp, index) => (
+          {experiences.map((exp, index) => (
             <div
               key={index}
               className="transition-opacity duration-500 opacity-0 lg:opacity-100"

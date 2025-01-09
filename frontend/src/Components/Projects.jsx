@@ -1,28 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import ProjectCard from './Reusables/ProjectCard';  // Import your ProjectCard component
-import axios from 'axios';
+import ProjectCard from './Reusables/ProjectCard';
+
+const projects = [
+  {
+      title: "Full Stack App",
+      image: "https://cdn.pixabay.com/photo/2015/02/24/02/05/website-647013_1280.jpg",
+      techStack: "MongoDB, Express, React, Nodejs",
+      projectLink: "https://github.com/dburkhart07/MERN-Stack-Portfolio",
+      delay: 0.5
+  },
+  {
+      title: "Life Expectancy Predictor",
+      image: "https://img.freepik.com/free-vector/stopwatch-timer-cartoon-icon-illustration_138676-2826.jpg",
+      techStack: "Python, Scikit-learn, TensorFlow, Pandas, NumPy",
+      projectLink: "https://github.com/dburkhart07/Life-Expectancy-Predictor",
+      delay: 1
+  },
+  {
+      title: "Project Lilac",
+      image: "https://img.freepik.com/free-photo/arcade-game-world-set-pixelated-retro-game-8bit-digital_53876-131171.jpg",
+      techStack: "C#, Unity",
+      projectLink: "https://github.com/Watcher008/Project-Lilac",
+      delay: 1.5
+  },
+  {
+      title: "Cancerous Tumor Detector",
+      image: "https://img.freepik.com/free-photo/medical-background-with-abstract-visualization-dna-strand_23-2149198819.jpg",
+      techStack: "Python, Scikit-learn",
+      projectLink: "https://github.com/dburkhart07/Cancerous-tumor-detector",
+      delay: 2
+  }
+];
 
 const Projects = () => {
-  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
-  const [projects, setProjects] = useState([]);  // State to store fetched projects
-
-  useEffect(() => {
-    // Fetch project data from the backend
-    axios.get(`${API_BASE_URL}/api/projects`)  // Backend endpoint
-      .then((response) => {
-        // Directly map the response data to match the ProjectCard props
-        const fetchedProjects = response.data.map((project) => ({
-          title: project.title,
-          image: project.image,
-          techStack: project.techStack.join(', '),  // Convert tech stack array to string
-          projectLink: project.projectLink,
-          delay: project.delay,  // Use delay as provided by the backend
-        }));
-        setProjects(fetchedProjects);  // Update state with mapped data
-      })
-      .catch((error) => console.error('Error fetching project data:', error));
-  }, []);
-
   return (
     <div className="bg-[rgb(85,17,0)] text-[rgb(255,233,209)] pt-[3rem] md:pt-[4rem] pb-[1rem]">
       <h1
