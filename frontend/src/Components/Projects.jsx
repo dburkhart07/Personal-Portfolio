@@ -20,7 +20,7 @@ const projects = [
       title: "Project Lilac",
       image: "https://img.freepik.com/free-photo/arcade-game-world-set-pixelated-retro-game-world-vector-illustration_1142-50896.jpg?t=st=1732763365~exp=1732766965~hmac=a211dd6faffe664783ce86c5af79e566e681014c12064a706566670582763356&w=826",
       techStack: "C#, Unity",
-      projectLink: "https://github.com/Watcher008/Project-Lilac",
+      projectLink: "",
       delay: 1.5
   },
   {

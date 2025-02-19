@@ -35,14 +35,16 @@ const ProjectCard = ({ title, image, techStack, projectLink, delay }) => {
           </p>
 
           {/* "View" Button */}
-          <a
-            href={projectLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 left-4 bg-yellow-500 text-black py-2 px-4 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
-          >
-            View
-          </a>
+          {projectLink && (
+            <a
+              href={projectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-4 left-4 bg-yellow-500 text-black py-2 px-4 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+            >
+              View
+            </a>
+          )}
         </div>
       </div>
     </div>
