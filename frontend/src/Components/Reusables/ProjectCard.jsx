@@ -19,7 +19,9 @@ const ProjectCard = ({ title, image, techStack, projectLink, delay }) => {
         />
         
         {/* Background Gradient (Yellow to Black) on Hover */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-yellow-400 to-black opacity-0 group-hover:opacity-80 transition-all duration-300"></div>
+        {projectLink && (
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-yellow-400 to-black opacity-0 group-hover:opacity-80 transition-all duration-300"></div>
+        )}
 
         {/* Dark Background for Tech Stack */}
         <div className="absolute bottom-0 left-0 w-full px-4 py-16 bg-black opacity-60 group-hover:opacity-0 transition-all duration-300"></div>
