@@ -11,6 +11,7 @@ const experiences = [
         "Automated documentation for a C++ API by integrating Doxygen and Sphinx into a CI/CD pipeline, ensuring up-to-date, version-controlled developer resources and reducing onboarding time for new engineers.",
         "Designed and implemented comprehensive unit tests to validate all API functionality, increasing test coverage from 0 to 100% and ensuring reliability across all core functions."
       ],
+      delay: 0
   },
   {
       company: "DraftKings Inc.",

@@ -7,7 +7,7 @@ const projects = [
       image: "https://static.independent.co.uk/2024/11/13/12/how-to-play-poker-copy.jpg?width=1200&height=1200&fit=crop",
       techStack: "Python, OpenAI Gym, NumPy",
       projectLink: "",
-      debugger: 0
+      delay: 0
   },
   {
       title: "Full Stack App",
