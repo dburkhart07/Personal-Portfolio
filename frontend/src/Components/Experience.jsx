@@ -5,7 +5,7 @@ import ExpImg from '../Img/experience_bg.svg';
 const experiences = [
   {
       company: "Delsys",
-      dates: "R&D Software Developer Intern",
+      dates: "August 2025 - Present",
       description: [
         "Developed an interactive UI with Dash to model and analyze thousands of time-series signals, implementing a scalable saving system that enabled users to persist edits and annotations across an arbitrary number of files, improving data traceability and collaboration.",
         "Automated documentation for a C++ API by integrating Doxygen and Sphinx into a CI/CD pipeline, ensuring up-to-date, version-controlled developer resources and reducing onboarding time for new engineers.",
