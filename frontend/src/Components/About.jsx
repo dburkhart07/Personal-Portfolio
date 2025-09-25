@@ -37,7 +37,7 @@ const About = () => {
         {/* Bio */}
         <section className="fade-in" style={{ animationDelay: '0s' }}>
           <p>
-            Hi, I'm Dalton! I'm currently a second-year student studying Computer Science and AI at Northeastern University.
+            Hi, I'm Dalton! I'm currently a third-year student studying Computer Science and AI at Northeastern University.
             My technical interests lie within the intersection between AI and software, specifically in healthcare, economics, and psychology.
             I also enjoy doing a lot of volunteer work in general, but especially with education in tech, and love working on 
             projects that aim to educate younger or underserved communities on how to become software developers.
