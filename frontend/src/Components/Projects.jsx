@@ -3,6 +3,13 @@ import ProjectCard from './Reusables/ProjectCard';
 
 const projects = [
   {
+      title: "Poker Bot",
+      image: "https://static.independent.co.uk/2024/11/13/12/how-to-play-poker-copy.jpg?width=1200&height=1200&fit=crop",
+      techStack: "Python, OpenAI Gym, NumPy",
+      projectLink: "",
+      debugger: 0
+  },
+  {
       title: "Full Stack App",
       image: "https://cdn.pixabay.com/photo/2015/02/24/02/05/website-647013_1280.jpg",
       techStack: "MongoDB, Express, React, Nodejs",
@@ -12,7 +19,7 @@ const projects = [
   {
       title: "Life Expectancy Predictor",
       image: "https://img.freepik.com/free-vector/stopwatch-timer-cartoon-icon-illustration_138676-2420.jpg?t=st=1732763082~exp=1732766682~hmac=17c95b78854ef636fd26912b6aabdedb576500a3996cb09471e44ca16ff5c7a3&w=826",
-      techStack: "Python, Scikit-learn, TensorFlow, Pandas, NumPy",
+      techStack: "Python, Scikit-learn, TensorFlow, Pandas, NumPy, Matplotlib",
       projectLink: "https://github.com/dburkhart07/Life-Expectancy-Predictor",
       delay: 1
   },
