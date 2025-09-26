@@ -84,6 +84,12 @@ function Homepage() {
                           >
                               Developer Tools
                           </button>
+                          <button
+                              onClick={() => setSelectedCategory('libraries')}
+                              className={`px-4 py-2 mx-2 ${selectedCategory === 'libraries' ? 'bg-orange-400' : 'bg-transparent'} text-white rounded-md`}
+                          >
+                              Libraries
+                          </button>
                       </div>
 
                       {/* Skills Language Section */}
@@ -93,9 +99,9 @@ function Homepage() {
                                   skills={[
                                       { name: 'Java: 5 years', level: '100%', color: 'bg-[#ff5733]' },
                                       { name: 'Python: 4 years', level: '80%', color: 'bg-[#f9a825]' },
-                                      { name: 'HTML/CSS/JS: 2 years', level: '40%', color: 'bg-[#8e44ad]' },
-                                      { name: 'C: 1.5 years', level: '30%', color: 'bg-[#3b3f42]' },
-                                      { name: 'TypeScript: 1 year', level: '20%', color: 'bg-[#00bcd4]' }
+                                      { name: 'TypeScript: 2 years', level: '40%', color: 'bg-[#8e44ad]' },
+                                      { name: 'C/C++: 1.5 years', level: '30%', color: 'bg-[#3b3f42]' },
+                                      { name: 'Swift: 1 year', level: '20%', color: 'bg-[#00bcd4]' }
                                   ]}
                               />
                           )}
@@ -104,9 +110,10 @@ function Homepage() {
                                   skills={[
                                       { name: 'React: 2 years', level: '100%', color: 'bg-[#ff5733]' },
                                       { name: 'Tensorflow: 2 years', level: '100%', color: 'bg-[#f9a825]' },
+                                      { name: 'TensorFlow: 1 year', level: '50%', color: 'bg-[#00bcd4]' },
+                                      { name: 'Nest.js: 1 year', level: '50%', color: 'bg-[#3b3f42]' },
+                                      { name: 'Next.js: 1 year', level: '50%', color: 'bg-[#3b3f42]' },
                                       { name: 'Tailwind: 1 year', level: '50%', color: 'bg-[#8e44ad]' },
-                                      { name: 'Express: 1 year', level: '50%', color: 'bg-[#3b3f42]' },
-                                      { name: 'Springboot: 1 year', level: '50%', color: 'bg-[#00bcd4]' }
                                   ]}
                               />
                           )}
@@ -115,9 +122,20 @@ function Homepage() {
                                   skills={[
                                       { name: 'Git: 3 years', level: '100%', color: 'bg-[#ff5733]' },
                                       { name: 'GitHub: 3 years', level: '100%', color: 'bg-[#f9a825]' },
-                                      { name: 'VSCode: 3 years', level: '100%', color: 'bg-[#8e44ad]' },
-                                      { name: 'IntelliJ: 2 years', level: '66.7%', color: 'bg-[#3b3f42]' },
-                                      { name: 'Postman: 2 years', level: '66.7%', color: 'bg-[#00bcd4]' }
+                                      { name: 'Postman: 2 years', level: '66.7%', color: 'bg-[#8e44ad]' },
+                                      { name: 'AWS: 1 year', level: '33.3%', color: 'bg-[#3b3f42]' },
+                                      { name: 'Jira: 1 year', level: '33.3%', color: 'bg-[#00bcd4]' }
+                                  ]}
+                              />
+                          )}
+                          {selectedCategory === 'libraries' && (
+                              <SkillsLanguage
+                                  skills={[
+                                      { name: 'Pandas: 2 years', level: '100%', color: 'bg-[#ff5733]' },
+                                      { name: 'NumPy: 2 years', level: '100%', color: 'bg-[#f9a825]' },
+                                      { name: 'Scikit-learn: 2 years', level: '100%', color: 'bg-[#8e44ad]' },
+                                      { name: 'Matplotlib: 2 year', level: '100%', color: 'bg-[#3b3f42]' },
+                                      { name: 'Gymnasium: 1 year', level: '50%', color: 'bg-[#00bcd4]' }
                                   ]}
                               />
                           )}
