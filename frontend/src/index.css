@@ -2,202 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-/* You can add additional custom styles below */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    min-height: 100vh;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: #F8FAFC;
+  color: #0F172A;
+}
+
+/* Glass utility */
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
 @keyframes fadeInUp {
-  0% {
+  from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
-  100% {
-    transform: translateY(0);
+  to {
     opacity: 1;
-  }  
+    transform: translateY(0);
+  }
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
-}
-  
-@keyframes bobbing {
-  0% {
-    transform: translateY(0);
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
+    transform: translateY(-20px);
   }
 }
 
-@keyframes moveGradient {
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+@keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-.animate-gradient-text {
-  background: linear-gradient(90deg, red, orange, yellow);
-  background-size: 300% 300%;
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-orb {
+  animation: floatOrb 8s ease-in-out infinite;
+}
+
+.animate-orb-slow {
+  animation: floatOrb 12s ease-in-out infinite;
+}
+
+.animate-orb-fast {
+  animation: floatOrb 6s ease-in-out infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #2563EB, #6366F1);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: moveGradient 3s linear infinite;
 }
 
-@keyframes moveFold {
-  0%, 100% {
-    transform: rotateX(0deg);
-  }
-  50% {
-    transform: rotateX(180deg);
-  }
-}
-
-@keyframes moveMail {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(50px);
-  }
-}
-
-.animated-mail {
-  position: absolute;
-  width: 200px;
-  height: 150px;
-  animation: moveMail 2s ease-in-out infinite, moveFold 2s ease-in-out infinite;
-}
-
-.shadow {
-  width: 250px;
-  animation: shadowExpand 2s ease-in-out infinite;
-}
-
-@keyframes shadowExpand {
-  0%, 100% {
-    width: 400px;
-  }
-  50% {
-    width: 250px;
-  }
-}
-
-.container-cradle {
-  --uib-size: 120px; /* Increased size of the cradle */
-  --uib-color: yellow; /* Changed color to yellow */
-  --uib-speed: 1.4s;
-  position: absolute; /* Use absolute positioning for centering */
-  top: 50%; /* Vertically center */
-  left: 50%; /* Horizontally center */
-  transform: translate(-50%, -50%); /* Exactly center the element */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(var(--uib-size) * 0.51);
-  height: calc(var(--uib-size) * 0.51);
-}
-
-.dot {
-  position: relative;
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  height: 100%;
-  width: 25%;
-  transform-origin: center top;
-}
-
-.dot::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 25%;
-  border-radius: 50%;
-  background-color: var(--uib-color);
-  transition: background-color 0.3s ease;
-}
-
-.dot:first-child {
-  animation: swing var(--uib-speed) linear infinite;
-}
-
-.dot:last-child {
-  animation: swing2 var(--uib-speed) linear infinite;
-}
-
-@keyframes swing {
-  0% {
-    transform: rotate(0deg);
-    animation-timing-function: ease-out;
-  }
-
-  25% {
-    transform: rotate(70deg);
-    animation-timing-function: ease-in;
-  }
-
-  50% {
-    transform: rotate(0deg);
-    animation-timing-function: linear;
-  }
-}
-
-@keyframes swing2 {
-  0% {
-    transform: rotate(0deg);
-    animation-timing-function: linear;
-  }
-
-  50% {
-    transform: rotate(0deg);
-    animation-timing-function: ease-out;
-  }
-
-  75% {
-    transform: rotate(-70deg);
-    animation-timing-function: ease-in;
-  }
-}
-
-@keyframes envelopeOpen {
-  0%, 100% {
-    transform: scale(1);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
-  25% {
-    transform: scale(1.05);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%);
-  }
-  50% {
-    transform: scale(1.05);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 70%);
-  }
-  75% {
-    transform: scale(1);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%);
-  }
-}
-
-@keyframes letterSlide {
-  0%, 100% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(-120%);
-    opacity: 1;
-  }
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563EB, #0EA5E9);
+  z-index: 9999;
+  transition: width 0.1s linear;
 }
