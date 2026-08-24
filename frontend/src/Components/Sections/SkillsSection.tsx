@@ -4,9 +4,12 @@ import SkillIcon from '../Reusables/SkillIcon';
 import {
   SiPython, SiGo, SiTypescript, SiJavascript, SiC, SiCplusplus, SiSwift, SiOpenjdk, SiPostgresql,
   SiReact, SiNextdotjs, SiNodedotjs, SiExpress, SiFlask, SiJest,
+  SiMongodb, SiNestjs, SiCsharp, SiUnity,
   SiAmazonwebservices, SiGooglecloud, SiDocker, SiKubernetes, SiDatadog, SiGit, SiGithubactions, SiPostman,
+  SiTensorflow, SiScikitlearn, SiR,
   SiOpencv, SiNumpy, SiPandas,
 } from 'react-icons/si';
+import { TbChartDots, TbChartAreaLine, TbArrowsShuffle } from 'react-icons/tb';
 
 const categories = [
   {
@@ -21,7 +24,10 @@ const categories = [
       { Icon: SiCplusplus, name: 'C++', color: '#00599C' },
       { Icon: SiSwift, name: 'Swift', color: '#F05138' },
       { Icon: SiOpenjdk, name: 'Java', color: '#ED8B00' },
+      { Icon: SiCsharp, name: 'C#', color: '#239120' },
+      { Icon: SiR, name: 'R', color: '#276DC3' },
       { Icon: SiPostgresql, name: 'PostgreSQL', color: '#4169E1' },
+      { Icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
     ],
   },
   {
@@ -34,7 +40,10 @@ const categories = [
       { Icon: SiExpress, name: 'Express', color: '#000000' },
       { Icon: SiFlask, name: 'Flask', color: '#000000' },
       { Icon: SiSwift, name: 'SwiftUI', color: '#F05138' },
+      { Icon: SiNestjs, name: 'NestJS', color: '#E0234E' },
       { Icon: SiJest, name: 'Jest', color: '#C21325' },
+      { Icon: SiTensorflow, name: 'TensorFlow', color: '#FF6F00' },
+      { Icon: SiUnity, name: 'Unity', color: '#000000' },
     ],
   },
   {
@@ -55,9 +64,13 @@ const categories = [
     name: 'Libraries',
     color: 'bg-purple-100 text-purple-700',
     skills: [
+      { Icon: SiScikitlearn, name: 'Scikit-learn', color: '#F7931E' },
       { Icon: SiOpencv, name: 'OpenCV', color: '#5C3EE8' },
+      { Icon: TbArrowsShuffle, name: 'ZeroMQ', color: '#DF0000' },
       { Icon: SiNumpy, name: 'NumPy', color: '#013243' },
       { Icon: SiPandas, name: 'Pandas', color: '#150458' },
+      { Icon: TbChartDots, name: 'Matplotlib', color: '#11557C' },
+      { Icon: TbChartAreaLine, name: 'Seaborn', color: '#4C72B0' },
     ],
   },
 ];

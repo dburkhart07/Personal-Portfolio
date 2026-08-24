@@ -9,8 +9,8 @@ interface GlassCardProps {
 const GlassCard: React.FC<GlassCardProps> = ({ children, className = '', hover = true }) => {
   return (
     <div
-      className={`glass rounded-2xl shadow-lg p-6 ${
-        hover ? 'hover:-translate-y-1 hover:shadow-xl transition-all duration-300' : ''
+      className={`glass rounded-2xl p-6 ${
+        hover ? 'hover:-translate-y-1 transition-all duration-300' : ''
       } ${className}`}
     >
       {children}

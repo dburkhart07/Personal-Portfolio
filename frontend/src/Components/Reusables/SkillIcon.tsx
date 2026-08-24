@@ -11,12 +11,11 @@ interface SkillIconProps {
 const SkillIcon: React.FC<SkillIconProps> = ({ Icon, name, color, delay = 0 }) => {
   return (
     <div
-      className="glass rounded-xl p-4 flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-default group relative"
+      className="glass rounded-xl p-3 flex flex-col items-center justify-center gap-2 hover:scale-105 transition-transform duration-300 cursor-default"
       style={{ animationDelay: `${delay}ms` }}
-      title={name}
     >
-      <Icon className="text-3xl md:text-4xl" style={{ color }} />
-      <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+      <Icon className="text-2xl md:text-3xl" style={{ color }} />
+      <span className="text-[10px] md:text-xs text-slate-500 text-center leading-tight">
         {name}
       </span>
     </div>

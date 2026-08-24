@@ -3,6 +3,8 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 interface TimelineCardProps {
   company: string;
+  location: string;
+  title: string;
   dates: string;
   description: string[];
   isOpen: boolean;
@@ -10,7 +12,7 @@ interface TimelineCardProps {
   index: number;
 }
 
-const TimelineCard: React.FC<TimelineCardProps> = ({ company, dates, description, isOpen, toggleExpand }) => {
+const TimelineCard: React.FC<TimelineCardProps> = ({ company, location, title, dates, description, isOpen, toggleExpand }) => {
   return (
     <div className="relative pl-8 pb-8 group">
       {/* Timeline line */}
@@ -19,13 +21,15 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ company, dates, description
       <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary border-4 border-blue-100 z-10" />
 
       <div
-        className="glass rounded-2xl p-5 cursor-pointer hover:shadow-lg transition-all duration-300 ml-4"
+        className="glass rounded-2xl p-5 cursor-pointer transition-all duration-300 ml-4"
         onClick={toggleExpand}
       >
         <div className="flex justify-between items-start">
           <div>
             <h3 className="text-lg font-semibold text-dark">{company}</h3>
-            <p className="text-sm text-primary font-medium">{dates}</p>
+            <p className="text-sm text-slate-500">{location}</p>
+            <p className="text-sm text-primary font-medium">{title}</p>
+            <p className="text-xs text-slate-400">{dates}</p>
           </div>
           <span className="text-slate-400 mt-1">
             {isOpen ? <FaChevronUp /> : <FaChevronDown />}

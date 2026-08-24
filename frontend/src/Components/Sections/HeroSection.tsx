@@ -1,5 +1,4 @@
-import React from 'react';
-import ProfessionalPicture from '../../Img/Professional Picture.jpg';
+import ProfessionalPicture from '../../Img/ProfessionalPicture.jpg';
 
 const HeroSection = () => {
   return (
@@ -24,7 +23,8 @@ const HeroSection = () => {
             Software Developer
           </h2>
           <p className="text-slate-500 text-lg max-w-lg mb-8">
-            Computer Science & AI student at Northeastern University, passionate about leveraging technology in healthcare and education.
+            Computer Science & AI student at Northeastern University, passionate learning and exploring new technologies, and 
+            leveraging them to build out large-scale applications.
           </p>
           <div className="flex gap-4 justify-center md:justify-start">
             <a
@@ -50,7 +50,7 @@ const HeroSection = () => {
             <img
               src={ProfessionalPicture}
               alt="Dalton Burkhart"
-              className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl animate-float"
+              className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover"
               loading="lazy"
             />
           </div>

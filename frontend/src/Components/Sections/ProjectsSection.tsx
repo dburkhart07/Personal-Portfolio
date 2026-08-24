@@ -2,51 +2,52 @@ import React from 'react';
 import SectionWrapper from '../Reusables/SectionWrapper';
 import ProjectCard from '../Reusables/ProjectCard';
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  techStack: string[];
+  projectLink: string;
+}
+
+const projects: Project[] = [
   {
-    title: "Poker Bot",
-    image: "https://static.independent.co.uk/2024/11/13/12/how-to-play-poker-copy.jpg?width=1200&height=1200&fit=crop",
-    techStack: ["Python", "OpenAI Gym", "NumPy"],
-    projectLink: "",
+    title: "MyFit",
+    description: "An AI-powered Android fitness app that generates personalized weekly workout plans using Google Gemini, with Firebase-backed authentication and workout history tracking.",
+    techStack: ["Kotlin", "Jetpack Compose", "Firebase", "Gemini AI"],
+    projectLink: "https://github.com/dburkhart07/MyFit",
   },
   {
-    title: "Full Stack App",
-    image: "https://cdn.pixabay.com/photo/2015/02/24/02/05/website-647013_1280.jpg",
-    techStack: ["MongoDB", "Express", "React", "Node.js"],
-    projectLink: "https://github.com/dburkhart07/MERN-Stack-Portfolio",
+    title: "Chatbot",
+    description: "A full-stack ChatGPT clone with JWT authentication, persistent per-user conversation history, and real-time chat powered by OpenAI's GPT-3.5 Turbo.",
+    techStack: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "OpenAI API"],
+    projectLink: "https://github.com/dburkhart07/MERN-Stack-Chatbot",
+  },
+  {
+    title: "Poker Agent",
+    description: "Texas Hold'em poker AI agents that learn optimal strategies through self-play using Counterfactual Regret Minimization to converge toward Nash equilibrium.",
+    techStack: ["Python", "NumPy", "Matplotlib"],
+    projectLink: "https://github.com/dburkhart07/CS-5100-Poker-CFR",
   },
   {
     title: "Life Expectancy Predictor",
-    image: "https://img.freepik.com/free-vector/stopwatch-timer-cartoon-icon-illustration_138676-2420.jpg",
-    techStack: ["Python", "Scikit-learn", "TensorFlow", "Pandas"],
+    description: "A machine learning system that predicts cardiac patient survival outcomes using five algorithms.",
+    techStack: ["Python", "Scikit-learn", "XGBoost", "TensorFlow", "Pandas"],
     projectLink: "https://github.com/dburkhart07/Life-Expectancy-Predictor",
-  },
-  {
-    title: "Project Lilac",
-    image: "https://img.freepik.com/free-photo/arcade-game-world-set-pixelated-retro-game-world-vector-illustration_1142-50896.jpg",
-    techStack: ["C#", "Unity"],
-    projectLink: "",
-  },
-  {
-    title: "Cancerous Tumor Detector",
-    image: "https://img.freepik.com/free-photo/medical-background-with-abstract-virus-cell_1048-14258.jpg",
-    techStack: ["Python", "Scikit-learn"],
-    projectLink: "https://github.com/dburkhart07/Cancerous-tumor-detector",
   },
 ];
 
-const ProjectsSection = () => {
+const ProjectsSection: React.FC = () => {
   return (
     <SectionWrapper id="projects">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
         Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
             title={project.title}
-            image={project.image}
+            description={project.description}
             techStack={project.techStack}
             projectLink={project.projectLink}
           />

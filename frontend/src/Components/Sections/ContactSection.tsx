@@ -106,9 +106,9 @@ const ContactSection: React.FC = () => {
         {/* Social links */}
         <div className="space-y-4">
           <p className="text-slate-600 text-lg mb-6">
-            I am actively looking for software engineering opportunities,
-            as well as any chances to work on fun, innovative projects.
-            Please don't hesitate to reach out!
+            Whether it's asking me about my experience, a coffee chat,
+            or sharing an exciting opportunity you know about, please do not
+            hesitate to reach out! :)
           </p>
           <a
             href="mailto:burkhart.d@northeastern.edu"
