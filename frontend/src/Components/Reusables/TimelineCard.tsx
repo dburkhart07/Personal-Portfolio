@@ -16,9 +16,9 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ company, location, title, d
   return (
     <div className="relative pl-8 pb-8 group">
       {/* Timeline line */}
-      <div className="absolute left-[11px] top-0 bottom-0 w-0.5 bg-blue-200 group-last:hidden" />
+      <div className="absolute left-[11px] top-0 bottom-0 w-0.5 bg-emerald-200 group-last:hidden" />
       {/* Timeline dot */}
-      <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary border-4 border-blue-100 z-10" />
+      <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary border-4 border-emerald-100 z-10" />
 
       <div
         className="glass rounded-2xl p-5 cursor-pointer transition-all duration-300 ml-4"

@@ -14,7 +14,7 @@ import { TbChartDots, TbChartAreaLine, TbArrowsShuffle } from 'react-icons/tb';
 const categories = [
   {
     name: 'Languages',
-    color: 'bg-blue-100 text-blue-700',
+    color: 'bg-emerald-100 text-emerald-700',
     skills: [
       { Icon: SiPython, name: 'Python', color: '#3776AB' },
       { Icon: SiGo, name: 'Go', color: '#00ADD8' },

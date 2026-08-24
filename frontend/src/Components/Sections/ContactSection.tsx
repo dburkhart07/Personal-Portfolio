@@ -94,8 +94,8 @@ const ContactSection: React.FC = () => {
               )}
               <button
                 type="submit"
-                className="w-full py-3 rounded-xl text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-                style={{ background: 'linear-gradient(135deg, #2563EB, #0EA5E9)' }}
+                className="w-full py-3 rounded-xl text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-green-700/25"
+                style={{ background: 'linear-gradient(135deg, #5B8C5A, #8FB996)' }}
               >
                 Send Message
               </button>

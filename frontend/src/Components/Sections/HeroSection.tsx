@@ -5,12 +5,12 @@ const HeroSection = () => {
     <section
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 50%, #BFDBFE 100%)' }}
+      style={{ background: 'linear-gradient(135deg, #F7F6F2 0%, #E8EDDE 50%, #D5DFC8 100%)' }}
     >
       {/* Floating orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300/30 rounded-full blur-3xl animate-orb" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-300/20 rounded-full blur-3xl animate-orb-slow" />
-      <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-sky-200/30 rounded-full blur-3xl animate-orb-fast" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-green-300/30 rounded-full blur-3xl animate-orb" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl animate-orb-slow" />
+      <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-emerald-200/30 rounded-full blur-3xl animate-orb-fast" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
         {/* Text content */}
@@ -29,8 +29,8 @@ const HeroSection = () => {
           <div className="flex gap-4 justify-center md:justify-start">
             <a
               href="#contact"
-              className="px-6 py-3 rounded-xl text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5"
-              style={{ background: 'linear-gradient(135deg, #2563EB, #0EA5E9)' }}
+              className="px-6 py-3 rounded-xl text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-green-700/25 hover:-translate-y-0.5"
+              style={{ background: 'linear-gradient(135deg, #5B8C5A, #8FB996)' }}
             >
               Get in Touch
             </a>

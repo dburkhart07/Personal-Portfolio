@@ -6,13 +6,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#2563EB',
-        secondary: '#0EA5E9',
-        accent: '#6366F1',
+        primary: '#5B8C5A',
+        secondary: '#8FB996',
+        accent: '#D4A574',
         slate: {
-          50: '#F8FAFC',
+          50: '#F7F6F2',
         },
-        dark: '#0F172A',
+        dark: '#1A2E1A',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

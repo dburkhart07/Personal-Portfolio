@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, techStack
           {techStack.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 text-xs font-medium rounded-full bg-blue-50 text-primary"
+              className="px-3 py-1 text-xs font-medium rounded-full bg-emerald-50 text-primary"
             >
               {tech}
             </span>
@@ -29,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, techStack
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-4 py-2 rounded-lg text-sm font-medium text-white transition-all duration-300"
-            style={{ background: 'linear-gradient(135deg, #2563EB, #0EA5E9)' }}
+            style={{ background: 'linear-gradient(135deg, #5B8C5A, #8FB996)' }}
           >
             View Project
           </a>

@@ -19,7 +19,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ id, children, className
       id={id}
       ref={ref}
       className={`py-20 px-4 md:px-8 lg:px-16 ${
-        alt ? 'bg-gradient-to-b from-white to-blue-50' : 'bg-slate-50'
+        alt ? 'bg-gradient-to-b from-white to-emerald-50' : 'bg-slate-50'
       } ${className}`}
     >
       <div
